@@ -64,22 +64,7 @@ extension UILabel {
     }
     
     /**
-     Sets up the label with two different kinds of attributes in its attributed text.
-     
-     - Important:
-     - primaryString = "Total:"
-     - secondaryString = "123"
-     - This means that the function will concat the secondary string into the primary string and highlights the secondary string.
-     - Using the highlightedText means the highlightedText itself is in the primaryString.
-     
-     - Parameters:
-     - primaryString: the normal attributed string.
-     - secondaryString: the bold or highlighted string.
-     - highlightedText: this one is like the secondary string, if this is provided, then the secondaryString is ignored. This is to be used if the highlighted text is not to be concatinated at the end of the primaryString
-     - highlightAllFoundHighlightedText: Bool defaults to false. This will allow the method to highlight all the equal texts found in the whole string. For instance, if you want to highlight all the existing words that are equal to "FREE", then set it to true.
-     */
-    /**
-     Sets up the label with two different kinds of attributes in its attributed text.
+     Sets up the label with attributed text and allowing to highlight specific text or all similar texts.
      
      Important:
      ```
@@ -90,14 +75,15 @@ extension UILabel {
      ```
      
      Parameters:
-     - leadingString: the normal attributed text.
-     - leadingTextColor: the text color for the leading text.
-     - leadingTextFont: the font for the leading text
-     - trailingString: the bold or highlighted text. adding or setting this parameter is optional.
-     - trailingTextColor: optional trailing text color
-     - trailingTextFont: optional trailing text font.
+     - completeString: the normal attributed text.
+     - textColor: the text color for the complete/primary text.
+     - font: the font for the complete text
+     - highlightedText: the highlighted text. adding or setting this parameter is optional.
+     - highlightedTextColor: optional highlighted text color
+     - highlightedTextFont: optional highlighted text font.
      - textAlignment: the text alignment of the whole attributed text. Defaults to .natural type.
      - numberOfLines: the number of lines. Default is 1.
+     - highlightAllOccurrence: Bool defaults to false. This will allow the method to highlight all the equal texts found in the whole string. For instance, if you want to highlight all the existing words that are equal to "FREE", then set it to true.
      - lineHeightMultiple: the line height multiple. Default is 1.
      - lineSpacing: the line line spacing. Default is 1.
      */
