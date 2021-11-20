@@ -95,7 +95,7 @@ extension UILabel {
                            highlightedTextFont: UIFont? = nil,
                            textAlignment: NSTextAlignment = .natural,
                            numberOfLines: Int = 1,
-                           highlightAllOccurrence: Bool = true,
+                           highlightAllOccurrence: Bool = false,
                            lineHeightMultiple: CGFloat = 1,
                            lineSpacing: CGFloat = 1) {
         let commonSetup = getCommonSetup(completeString: completeString,
